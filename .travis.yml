@@ -4,3 +4,11 @@ before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
 - pdflatex -interaction=nonstopmode -halt-on-error rules.tex
+
+deploy:
+  provider: releases
+  api_key: "11aff8100a145b44790e9dec9592738348b13e38"
+  file: "rules.pdf"
+  skip_cleanup: true
+  on:
+    tags: true
