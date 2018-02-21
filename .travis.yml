@@ -10,5 +10,3 @@ deploy:
   api_key: "11aff8100a145b44790e9dec9592738348b13e38"
   file: "rules.pdf"
   skip_cleanup: true
-  on:
-    tags: true
