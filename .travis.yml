@@ -4,12 +4,12 @@ before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
 - pdflatex -interaction=nonstopmode -halt-on-error rules.tex
-
 deploy:
   provider: releases
-  api_key: "11aff8100a145b44790e9dec9592738348b13e38"
-  file: "rules.pdf"
-  skip_cleanup: true
-
+  api_key:
+    secure: ojA59o55+NNutOBeTneiY95v9ZHziknmmBYx5ZIGJXUuVwwAcca4s/SHn5Bz3UN/LBjRU+lc9+RgfBeyjbJknVYckwlxMVPoANDucR/PVY43tOcyQN0YtMy4+xqXdDLVXzToAfHiFf5xH+XaPOsAB6MbEd/54YoZtw7RHnZxAJZG5RAW3MuNAM7/PYhwIpeTkZFgUF9d4uFTrEj3ycX+Racy7Fn4fbu9vIxqYxFJdIXke3KphqhXFGV0g9ZIT2pZAeObRsih1iS6srRmH6UHtQPUhhyasKgZxm/s5hnK6hOc7coUs28gg2Y5oAB4Z8bFjNJFcoi4ymzlEF193CflNu7+L+LX1IijFe2bWNkxC8rh4xw3DYkuzHWCYA1buGrSxA6M353HXkMWTz0qNSmGWSIwTm6jNGHGng8GfaoBok8Q0KdaQnxJjW+C1p9O57XxjAfsQq8YZGH5r3DT+NphF/5qqr/z3xZCEhiBM2UZjqyHLXw7ZFJtKuT+qgbcQ0k9P0v67Q8xuzH/dt2Qs0u5r/TuX7mhlEPdAOPLSfjeZPJR9IM0KzmFpiemLh+0clmCFYjrTZkkgQ6zRCFFyutElUZLYaRQoZCjeCVjFPkk7aVgiv42yCLulup2+GFATbHu9DQ5np82RxX4fQnQFWmQ/gnp+Ed6s4KqbPKxXORcZTg=
+  file: rules.pdf
+  on:
+    repo: Magelfik/regles-serv-mc-2018
 notifications:
   webhooks: http://serv.magelfik.ch/notifiy-rules-change.php
