@@ -14,3 +14,4 @@ deploy:
     repo: Magelfik/regles-serv-mc-2018
 notifications:
   webhooks: http://serv.magelfik.ch/notifiy-rules-change.php
+  email: false
